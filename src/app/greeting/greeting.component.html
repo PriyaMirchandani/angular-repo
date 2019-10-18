@@ -1,0 +1,14 @@
+<!--<h3 class="text-color text-bkcolor"> {{message}} </h3>--> <!--data binding-->
+<h3 [class]="textColor"> {{message}} </h3>
+<h3 [ngClass]="['text-color','text-bkcolor']">{{message}}</h3>
+<h3 [ngClass]="[textColor,textBkColor]">{{message}}</h3><!--property binding-->
+<h3 [ngClass]="greetingStyle">{{message}}</h3>
+<h3 [ngStyle]="{'color':'red','background-color':'blue'}">{{message}}</h3>
+
+<button (click)="sayGreet($event)">greet</button>
+<h1 [ngStyle]="{'color':toggleColor1,'background-color':toggleBackgroundColor}">happy diwali</h1>
+<button class="btn btn-secondary" (click)="toggleColor()">toggle</button>
+<h3 class="text-color text-bkcolor"> {{message|uppercase}} </h3>
+<h3 class="text-color text-bkcolor"> {{message|lowercase}} </h3>
+<h3 class="text-color text-bkcolor"> {{message|titlecase}} </h3>
+<h3 > {{message|reverseString}} </h3>

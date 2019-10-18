@@ -1,0 +1,9 @@
+<div>
+    <input placeholder="enter your age"[(ngModel)]="age">
+</div>
+<div  [ngSwitch]="age">
+<h2  *ngSwitchCase="'2'">you got admission to playgroup</h2>
+<h2  *ngSwitchCase="'3'">you got admission to junior kg</h2>
+<h2  *ngSwitchCase="'4'">you got admission to senior kg</h2>
+<h2  *ngSwitchDefault> sorry no admission</h2>
+</div>
