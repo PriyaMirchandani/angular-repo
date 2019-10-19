@@ -1,0 +1,37 @@
+
+<div class="container-fluid" style="width : fit-content;">
+<ngb-carousel *ngIf="images">
+<ng-template ngbSlide>
+<div class="picsum-img-wrapper">
+<img [src] ="images[0]" alt="Tandom first child">
+</div>
+<div class="carousel-caption">
+<h3>first slide label</h3>
+<p>this is first image</p>
+</div>
+</ng-template>
+
+<ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+    <!-- <img [src] ="images[1]" alt="Tandom first child"> -->
+    <img  src="../../assets/images/download (1).jfif" alt="Tandom first child" width="800" height=600>
+    </div>
+    <div class="carousel-caption">
+    <h3>second slide label</h3>
+    <p>this is second image</p>
+    </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+        <img [src] ="images[2]" alt="Tandom first child">
+        </div>
+        <div class="carousel-caption">
+        <h3>third slide label</h3>
+        <p>this is third image</p>
+        </div>
+        </ng-template>
+    
+
+</ngb-carousel>
+</div>

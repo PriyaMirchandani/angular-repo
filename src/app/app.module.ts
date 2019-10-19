@@ -13,7 +13,11 @@ import { DatepickerTestComponent } from './datepicker-test/datepicker-test.compo
 import { TimepickerTestComponent } from './timepicker-test/timepicker-test.component';
 import { RatingTestComponent } from './rating-test/rating-test.component';
 import { SwitchComponent } from './switch/switch.component';
-import { ReverseStringPipe } from './reverse-string.pipe'
+import { ReverseStringPipe } from './reverse-string.pipe';
+import { CarouselTestComponent } from './carousel-test/carousel-test.component';
+import { ProductFormComponent } from './product-form/product-form.component'
+import { HttpClientModule     } from '@angular/common/http';
+import { ProductService } from './product.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,15 +30,18 @@ import { ReverseStringPipe } from './reverse-string.pipe'
     TimepickerTestComponent,
     RatingTestComponent,
     SwitchComponent,
-    ReverseStringPipe
+    ReverseStringPipe,
+    CarouselTestComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

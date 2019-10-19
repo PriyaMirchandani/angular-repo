@@ -1,0 +1,5 @@
+[
+{ "productId":5001 ,"name":"refrigerator","brand":"lg","price":34000.00},
+{ "productId":5002 ,"name":"mobile","brand":"sony","price":14000.00 },
+{ "productId":5003 ,"name":"laptop","brand":"hp","price":54000.00}
+]

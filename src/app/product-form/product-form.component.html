@@ -1,0 +1,47 @@
+<div class="container-fluid">
+<form #productForm="ngForm" class="was-validated" (ngSubmit)="onSubmit()">
+<p> valid form : {{productForm.form.valid}}</p>
+<p>{{productForm.value|json}}</p>
+<div class="form-group">
+<label>ProductId</label>
+<input #id="ngModel" name="productId" type="number" pattern="^\d{4}$" class="form-control" [(ngModel)]="product.productId" required>
+<div *ngIf="id.errors && (id.invalid || id.dirty)">
+    <small *ngIf="id.errors.required" class="text-danger">productId is required</small>
+    <small *ngIf="id.errors.pattern" class="text-danger">productId must be 4 digits</small>
+</div>
+</div>
+
+<div class="form-group">
+    <label>Name</label>
+    <input #nm="ngModel" name="name" type="text" class="form-control" [(ngModel)]="product.name" required>
+    <div class="valid-feedback">valid</div>
+    <p>{{nm.className}}</p>
+    <p>Touched : {{nm.touched}}</p>
+    <p>Pristine : {{nm.pristine}}</p>
+    <p>Valid : {{nm.valid}}</p>
+    <div *ngIf="nm.errors && nm.invalid">
+        <small *ngIf="nm.errors.required" class="text-danger">name is required </small>
+    </div>
+    <div class="invalid-feedback">please fill out this message</div>
+</div>
+
+    <div class="form-group">
+        <label>Brand</label>
+        <input #br="ngModel"  name="brand" type="text" class="form-control" [(ngModel)]="product.brand" required> 
+        <div *ngIf="br.errors && br.invalid">
+            <small *ngIf="br.errors.required" class="text-danger">brand is required</small>
+        </div>
+</div>
+
+        <div class="form-group">
+            <label>Price</label>
+            <input #pr="ngModel" name="price" type="number" pattern="^\d{6}$" class="form-control" [(ngModel)]="product.price" required>
+            <div *ngIf="pr.errors && (pr.invalid || pr.dirty)">
+                <small *ngIf="pr.errors.required" class="text-danger">Price is required</small>
+                <small *ngIf="pr.errors.pattern" class="text-danger">price must be 6 digits</small>
+                </div>
+</div>
+
+            <button [disabled]="productForm.form.invalid" type="submit" class="btn btn-primary">submit</button>
+</form>
+</div>
