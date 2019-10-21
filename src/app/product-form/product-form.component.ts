@@ -21,7 +21,7 @@ export class ProductFormComponent implements OnInit {
 onSubmit( )
 {
   console.log(this.product);
-  this.productService.addProducts(this.product).subscribe();
+   this.productService.addProducts(this.product).subscribe();
 
 }
 

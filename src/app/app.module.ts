@@ -18,6 +18,7 @@ import { CarouselTestComponent } from './carousel-test/carousel-test.component';
 import { ProductFormComponent } from './product-form/product-form.component'
 import { HttpClientModule     } from '@angular/common/http';
 import { ProductService } from './product.service';
+import { ColorDirective } from './color.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { ProductService } from './product.service';
     SwitchComponent,
     ReverseStringPipe,
     CarouselTestComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule,
